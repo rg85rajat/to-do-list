@@ -1,0 +1,195 @@
+body {
+  background-color: #1f1e1e;
+  color: white;
+  overflow: hidden;
+  font-family: Arial, sans-serif; /* Ensure a fallback font is set */
+}
+
+h1 {
+  text-align: center;
+}
+
+.todo-wrapper {
+  background: #353434;
+  padding: 2%;
+  width: 80%; /* Adjusted for responsiveness */
+  max-width: 800px; /* Maximum width for larger screens */
+  margin: 3% auto; /* Center the wrapper */
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px rgb(27, 27, 27);
+}
+
+.todo-input {
+  display: flex;
+  flex-wrap: wrap; /* Ensure items wrap to next line on smaller screens */
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(78, 78, 78);
+  padding-bottom: 15px; /* Reduced padding for smaller screens */
+  margin-bottom: 15px; /* Reduced margin for smaller screens */
+}
+
+.todo-input-item {
+  flex: 1 1 100%; /* Take full width on smaller screens */
+  margin-right: 0;
+  margin-bottom: 15px; /* Spacing between items */
+}
+
+.todo-input-item label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block; /* Ensure labels are block-level for full width */
+}
+
+.todo-input-item input {
+  padding: 8px;
+  border: none;
+  width: 100%; /* Full width input */
+}
+
+.primaryBtn {
+  background-color: rgb(0, 230, 122);
+  color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 15px; /* Reduced margin for smaller screens */
+  padding: 10px 20px; /* Increase padding for better touch targets */
+  width: auto; /* Allow button to expand based on content */
+  cursor: pointer;
+}
+
+.secondaryBtn {
+  background-color: rgb(71, 71, 71);
+  color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 15px; /* Reduced margin for smaller screens */
+  padding: 10px 20px; /* Increase padding for better touch targets */
+  cursor: pointer;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo-list-item {
+  background-color: #414040;
+  display: flex;
+  flex-direction: column; /* Ensure items stack vertically */
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 15px; /* Spacing between items */
+  box-shadow: 0px 3px 5px rgb(43, 42, 42);
+}
+
+.todo-list-item h3 {
+  font-size: 20px; /* Adjust font size for smaller screens */
+  color: rgb(0, 230, 122);
+  font-weight: bold;
+  margin: 0;
+}
+
+.todo-list-item p {
+  font-size: 12px; /* Adjust font size for smaller screens */
+  color: rgb(161, 161, 161);
+  margin-top: 8px;
+}
+
+.icon {
+  font-size: 25px; /* Adjust icon size for smaller screens */
+  cursor: pointer;
+}
+
+.edit__wrapper {
+  background-color: #414040;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit__wrapper input,
+.edit__wrapper textarea {
+  border: 1px solid lightgray;
+  padding: 8px; /* Reduced padding for smaller screens */
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.edit__wrapper .primaryBtn {
+  margin: 10px auto; /* Center button */
+  padding: 10px 20px; /* Increase padding for better touch targets */
+  font-size: 14px; /* Adjust font size for smaller screens */
+  width: auto; /* Allow button to expand based on content */
+}
+
+/* Media Queries for Responsive Design */
+
+@media (max-width: 768px) {
+  .todo-wrapper {
+    padding: 5%;
+  }
+
+  .todo-input-item {
+    flex: 1 1 100%; /* Take full width on smaller screens */
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%; /* Full width buttons on smaller screens */
+  }
+
+  .todo-list-item {
+    padding: 15px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .edit__wrapper input,
+  .edit__wrapper textarea {
+    padding: 6px;
+  }
+
+  .edit__wrapper .primaryBtn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .todo-wrapper {
+    padding: 10px;
+  }
+
+  .todo-input {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .todo-list-item {
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+
+  .edit__wrapper input,
+  .edit__wrapper textarea {
+    padding: 5px;
+  }
+
+  .edit__wrapper .primaryBtn {
+    padding: 6px 12px;
+    font-size: 10px;
+  }
+}
